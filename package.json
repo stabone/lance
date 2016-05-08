@@ -1,0 +1,30 @@
+{
+  "name": "courdure",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stabone/lance.git"
+  },
+  "keywords": [
+    "caurdure"
+  ],
+  "author": "Ivars Nalglis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stabone/lance/issues"
+  },
+  "homepage": "https://github.com/stabone/lance#readme",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "st": "^1.1.0"
+  },
+  "devDependencies": {
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.1"
+  }
+}
