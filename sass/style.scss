@@ -6,11 +6,8 @@ $page-font: 'Open Sans', sans-serif;
 $page-width: 600px;
 
 /* colors */
-// $primary-bg-color: #e15b5f;
-// $primary-bg-color: #FFCCCB;
 $primary-bg-color: #F75D59;
 $primary-page-bg-color: #F3F3F3;
-// $primary-page-bg-color: #FFCCCB;
 
 $acent-color: #e15b5f;
 $main-text-color: #342A2A;
@@ -31,7 +28,7 @@ a {
 
 footer {
     width: 60px;
-    margin: 5px auto;
+    margin: 5px auto 24px;
 }
 
 nav {
@@ -87,8 +84,7 @@ nav {
         -o-box-shadow: 1px 1px 1px 1px $midnight-blue;
     }
 
-    .phone:hover,
-    .mail:hover { a { color: white; } }
+    .phone:hover, .mail:hover { a { color: white; } }
 }
 
 .logo {
@@ -97,6 +93,7 @@ nav {
     text-align: center;
     width: 320px;
     background-color: white;
+
     transform: skewX(-20deg);
     -webkit-transform: skewX(-20deg);
     -moz-transform: skewX(-20deg);
@@ -119,13 +116,14 @@ nav {
     border-bottom: 2px solid $acent-color;
 }
 
+.terra { padding-top: 54px; }
+
 .tool {
     ul { text-align: left; }
 
     .info {
         margin: 10px auto;
         width: 400px;
-        margin-bottom: 36px;
         border: 1px solid $light-grey;
         border-collapse: collapse;
         text-align: left;
