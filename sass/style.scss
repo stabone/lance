@@ -1,6 +1,7 @@
 
 /* fonts */
 $page-font: 'Open Sans', sans-serif;
+$cta-font:  'Roboto', sans-serif;
 
 /* size */
 $page-width: 600px;
@@ -12,12 +13,14 @@ $primary-page-bg-color: #F3F3F3;
 $acent-color: #e15b5f;
 $main-text-color: #342A2A;
 $light-grey: #efefef;
+$silver: #BDC3C7;
 $midnight-blue: #2C3E50;
 
 body {
     margin: 0px;
     padding: 0px;
     text-align: left;
+    line-height: 1.4;
     background-color: $primary-page-bg-color;
 }
 
@@ -56,9 +59,13 @@ nav {
     background-color: white;
 }
 
-.section { padding: 20px 50px 50px 40px; }
+.section { background-color: $light-grey; }
 
-.call-to-action { background-color: $primary-bg-color; }
+.call-to-action {
+    background-color: $primary-bg-color;
+    font-family: $cta-font;
+    padding: 20px 50px 50px 40px;
+}
 
 .contacts {
     background-color: $primary-bg-color;
@@ -93,7 +100,7 @@ nav {
     text-align: center;
     width: 320px;
     background-color: white;
-    
+
     border-radius: 2px;
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
@@ -115,28 +122,23 @@ nav {
     .text { font-size: 32px; }
 }
 
-.seperator {
-    line-height: 2px;
-    width: 100%;
-    background-color: $primary-bg-color;
-    border-bottom: 2px solid $acent-color;
-}
-
 .terra { padding-top: 54px; }
 
 .tool {
+    padding: 20px 50px 50px 40px;
+
     ul { text-align: left; }
 
     .info {
         margin: 10px auto;
         width: 400px;
-        border: 1px solid $light-grey;
+        border: 1px solid $silver;
         border-collapse: collapse;
         text-align: left;
 
         td {
             padding: 3px 20px;
-            border: 1px solid $light-grey;
+            border: 1px solid $silver;
         }
     }
 
@@ -146,6 +148,13 @@ nav {
             animation-name: underline_text;
         }
     }
+}
+
+.seperator {
+    line-height: 2px;
+    width: 100%;
+    background-color: $primary-bg-color;
+    border-bottom: 2px solid $acent-color;
 }
 
 @keyframes underline_text {
