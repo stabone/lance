@@ -49,7 +49,7 @@ nav {
 }
 
 .container {
-    width: $page-width;
+    max-width: $page-width;
     margin: 40px auto;
     color: $main-text-color;
     font-family: $page-font;
@@ -93,6 +93,12 @@ nav {
     text-align: center;
     width: 320px;
     background-color: white;
+    
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
 
     transform: skewX(-20deg);
     -webkit-transform: skewX(-20deg);
