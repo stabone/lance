@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   id="svg4136"
+   viewBox="0 0 16 16"
+   height="16"
+   width="16">
+  <defs id="defs4138" />
+  <g transform="translate(1,-1036.3622)">
+    <path transform="matrix(1.418343,0,0,1.5622084,-3.0235352,-590.09323)"
+       d="m 9.6428575,1049.5944 -1.9036743,0.028 -1.9036744,0.028 0.9278844,-1.6625 0.9278844,-1.6624 0.9757899,1.6348 z"
+       id="path4684"
+       style="fill:none;fill-opacity:0.84422111;stroke:#000000;stroke-width:3;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1" />
+    <path style="fill:#ffffff;fill-opacity:0.84422111;stroke:#f9f9f9;stroke-width:2.55101562;stroke-miterlimit:8;stroke-dasharray:none;stroke-opacity:1"
+       id="path4686"
+       d="m 9.6428575,1049.5944 -1.9036743,0.028 -1.9036744,0.028 0.9278844,-1.6625 0.9278844,-1.6624 0.9757899,1.6348 z"
+       transform="matrix(0.3755439,0,0,0.52990446,3.9088872,494.65416)" />
+    <path id="path4696"
+       d="m 7.7140234,1041.4392 2.0273106,-4.5381"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.53796965px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.53796965px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 7.8216916,1042.0195 -2.027311,-4.5381"
+       id="path4698" />
+  </g>
+</svg>
