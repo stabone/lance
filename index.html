@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="lv">
+<html lang="lv" ng-app="app">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -19,84 +19,16 @@
         <title>Ūdens un gāzes cauruļu ievilkšana nerokot tranšejas | SIA Caurdure</title>
     </head>
     <body>
+        <nav>
+            <ul>
+                <li><a href="#/">Sākums</a></li>
+                <li><a href="#/equipment">Iekārta</a></li>
+                <li><a href="#/contacts">Kontakti</a></li>
+            </u>
+        </nav>
+
         <div class="container">
-            <div class="section call-to-action">
-                <div class="logo">
-                    <span class="slashes">///</span> <strong class="text">Caurdure</strong>
-                </div>
-                <p>SIA "Caurdure" veic pazemes komunikāciju horizontālo urbšanu.</p>
-                <p>Ievilksim ūdens, gāzes, elektroapgādes vai citas caurules zem zemes,
-                    līdz ar to Jūsu bruģakmeņa klājums un iekoptais dārzs būs neskarts!</p>
-                <p>Cauruli ievilks no viena punkta uz otru, kā Jums ir nepieciešams.
-                    Piemēram, ir iespējams cauruli ievilkt no ielas daļas uzreiz jūsu mājas pagrabā.
-                    Iekārta ir neliela, līdz ar to darbus var veikt ierobežota izmēra teritorijās.</p>
-                <p>Mēs esam sākuši darboties šajā jomā kopš 2012. gadā, un par šo laiku ir ieguldītas
-                    caurules vairāk, kā <strong>9854 metru</strong> garumā.</p>
-                <p>Mēs darbojamies visā Latvijā!</p>
-            </div>
-
-            <div class="seperator"></div>
-
-            <div class="section img">
-                <img class="terra" src="/assets/MJLV_1400.jpg" alt="Terra Mini-Jet MJ 1400" />
-            </div>
-
-            <div class="section tool">
-                <div class="description">
-                    TERRA MINI-JET MJLV 1400 ir cauruļu ievilkšanas iekārta, kura tika izveidota,
-                    lai būtu piemērotu Šveices kalnainajiem reģioniem, kuri izvira sekojošus ierobežojumus:
-                    <ul>
-                        <li>ierobežota vieta iekārtas izvietošanai,</li>
-                        <li>apgrūtināti ievilkšanas apstākļi,</li>
-                        <li>nelīdzena virsma.</li>
-                    </ul>
-                </div>
-
-                <table class="info">
-                    <tr>
-                        <td>Nostāšanās garums</td>
-                        <td>4 m</td>
-                    </tr>
-                    <tr>
-                        <td>Maksimālais urbuma garums</td>
-                        <td>120 m</td>
-                    </tr>
-                    <tr>
-                        <td>Maksimālais caurules diametrs</td>
-                        <td>&#8960; 300 mm</td>
-                    </tr>
-                    <tr>
-                        <td>Minimālais caurules diametrs</td>
-                        <td>&#8960; 25 mm</td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="section contacts">
-                <h1>Kontakti</h1>
-                <div class="info">
-                    <h3>Rekvizīti</h3>
-                    <div class="requisite">
-                        <p>SIA "Caurdure"</p>
-                        <p>Juridiskā adrese: Maskavas iela 273/3-52, Rīga, LV - 1036, Latvija</p>
-                        <p>PVN LV 40103536458</p>
-                        <p>Reģ. Nr.: 40103536458</p>
-                        <p>Konts: LV53RIKO0002013254424</p>
-                        <p>Banka: A/S DNB banka</p>
-                        <p>Kods: RIKOLV2X</p>
-                    </div>
-                </div>
-                <div class="info">
-                    <img class="profile-img" src="/assets/vilnis.jpg" alt="Vilnis Talapins" />
-                    <div class="name">Vilnis Talapins</div>
-                    <div class="phone">
-                        <a href="tel:+37125459111">Tel.: +371 25459111</a>
-                    </div>
-                    <div class="mail">
-                        <a href="mailto:caurdure@gmail.com">E - pasts: caurdure@gmail.com</a>
-                    </div>
-                </div>
-            </div>
+            <ng-view></ng-view>
         </div>
 
         <footer>
@@ -106,6 +38,8 @@
             </a>
         </footer>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-route.min.js "></script>
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -114,5 +48,6 @@
           ga('create', 'UA-73715514-2', 'auto');
           ga('send', 'pageview');
         </script>
+        <script src="/js/script.js"></script>
     </body>
 </html>
