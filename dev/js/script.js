@@ -5,9 +5,6 @@ app.config(['$routeProvider', function($routeProvider) {
         when('/', {
             templateUrl: './partials/index.html'
         }).
-        when('/equipment', {
-            templateUrl: './partials/equipment.html'
-        }).
         when('/contacts', {
             templateUrl: './partials/contacts.html'
         }).
