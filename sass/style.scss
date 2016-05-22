@@ -103,6 +103,7 @@ footer {
 }
 
 nav {
+    width: 100%;
     padding: 3px 0px;
     text-align: center;
     font-weight: 600;
@@ -110,6 +111,7 @@ nav {
 
     ul {
         list-style: none;
+        padding: 0;
 
         li {
             display: inline-block;
@@ -242,8 +244,11 @@ section { background-color: $light-grey; }
     padding-bottom: 30px;
 
     h2 { padding-top: 40px; }
-    a { padding: 20px 5px; }
 }
+
+.videos { iframe { width: 100%; } }
+
+.certificates { a { padding: 0; img { width: 100%; } } }
 
 @media all and (min-width: 800px) {
     .contacts {
@@ -261,6 +266,16 @@ section { background-color: $light-grey; }
         }
         .first { padding: 20px 10px 20px 40px; text-align: left; }
         .info:last-child { padding: 70px 40px 20px 10px; width: 34%; }
+    }
+}
+
+@media all and (min-width: 400px){
+    .certificates {
+        a {
+            padding: 20px 5px;
+
+            img { width: 380px; }
+        }
     }
 }
 
