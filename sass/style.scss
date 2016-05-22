@@ -212,7 +212,7 @@ section { background-color: $light-grey; }
     padding-top: 20px;
     padding-bottom: 20px;
 
-    h1 { text-align: center; padding-top: 20px; }
+    h1 { text-align: center; }
 
     &:after {
         content: " ";
@@ -263,6 +263,8 @@ section { background-color: $light-grey; }
 }
 
 .videos { iframe { width: 100%; } }
+
+.map { iframe { width: 100%; height: 400px; } }
 
 .certificates { a { padding: 0; img { width: 100%; } } }
 
