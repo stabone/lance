@@ -133,6 +133,19 @@ nav {
 
 section { background-color: $light-grey; }
 
+#equipment {
+    .info {
+        margin: 10px auto;
+        width: 100%;
+        max-width: 460px;
+        border: 1px solid $silver;
+        border-collapse: collapse;
+        text-align: left;
+
+        td { padding: 3px 20px; border: 1px solid $silver; }
+    }
+}
+
 .logo {
     background-color: $primary-bg-color;
     padding-top: 40px;
@@ -170,7 +183,7 @@ section { background-color: $light-grey; }
     .info {
         margin: 10px auto;
         width: 100%;
-        max-width: 440px;
+        max-width: 460px;
         border: 1px solid $silver;
         border-collapse: collapse;
         text-align: left;
@@ -179,7 +192,10 @@ section { background-color: $light-grey; }
     }
 
     .read-more {
+        padding-top: 12px;
         text-align: center;
+        text-decoration: none;
+        font-weight: 800;
 
         &:hover {
             animation-duration: 1s;
