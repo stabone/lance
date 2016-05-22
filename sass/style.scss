@@ -90,7 +90,7 @@ section { background-color: $light-grey; }
     padding: 3px 2px;
     text-align: center;
     width: 90%;
-    max-width: 340px;
+    max-width: 440px;
     background-color: white;
 
     border-radius: 2px;
@@ -141,8 +141,9 @@ section { background-color: $light-grey; }
     text-align: center;
     width: 100%;
     padding-top: 20px;
+    padding-bottom: 20px;
 
-    h1 { text-align: center; padding-top: 50px; }
+    h1 { text-align: center; padding-top: 20px; }
 
     &:after {
         content: " ";
