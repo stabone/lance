@@ -230,6 +230,8 @@ section { background-color: $light-grey; }
         @include box-shadow(1px 1px 1px 1px $midnight-blue);
     }
 
+    .phone, .mail {padding: 4px; }
+
     .phone:hover, .mail:hover { a { color: white; } }
 
     .info {
