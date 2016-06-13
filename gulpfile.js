@@ -3,11 +3,18 @@
 
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    imagemin = require('gulp-imagemin');
 
 var paths = {
     js: './dev/js/script.js'
 };
+
+gulp.task('icons', function () {
+    return gulp.src('./dev/icons/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./assets/icons'));
+});
 
 gulp.task('sass', function () {
     return gulp.src('./sass/*.scss')
@@ -26,4 +33,4 @@ gulp.task('watch', function () {
     gulp.watch(paths.js, ['js']);
 });
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'js', 'sass']);

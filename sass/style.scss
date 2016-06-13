@@ -4,63 +4,7 @@ $page-font: 'Open Sans', sans-serif;
 $cta-font:  'Roboto', sans-serif;
 $glitch-font: 'Oswald', sans-serif;
 
-/* browser prefixes */
-@mixin animation($animations) {
-    -webkit-animation: $animations;
-    -moz-animation: $animations;
-    -ms-animation: $animations;
-    -o-animation: $animations;
-    animation: $animations;
-}
-
-@mixin background-size($size) {
-    -webkit-background-size: $size;
-    -moz-background-size: $size;
-    -o-background-size: $size;
-    background-size: $size;
-}
-
-@mixin border-radius($radius) {
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    -o-border-radius: $radius;
-    border-radius: $radius;
-}
-
-@mixin box-shadow($shadow) {
-    -webkit-box-shadow: $shadow;
-    -moz-box-shadow: $shadow;
-    -ms-box-shadow: $shadow;
-    -o-box-shadow: $shadow;
-    box-shadow: $shadow;
-}
-
-@mixin keyframes($animationName) {
-    @-webkit-keyframes #{$animationName} {
-        @content;
-    }
-    @-moz-keyframes #{$animationName} {
-        @content;
-    }
-    @-ms-keyframes #{$animationName} {
-        @content;
-    }
-    @-o-keyframes #{$animationName} {
-        @content;
-    }
-    @keyframes #{$animationName} {
-        @content;
-    }
-}
-
-@mixin transform($transforms) {
-	-webkit-transform: $transforms;
-	-moz-transform: $transforms;
-	-ms-transform: $transforms;
-	-o-transform: $transforms;
-	transform: $transforms;
-}
+@import "_mixins";
 
 /* size */
 $page-width: 800px;
@@ -88,18 +32,22 @@ body {
 a { text-decoration: none; color: $main-text-color; }
 
 footer {
-    width: 150px;
-    margin: 5px auto 24px;
+    @include box-sizing(border-box);
+    padding-bottom: 40px;
 
-    a {
-        padding: 6px;
-        font-weight: 600;
-        background-color: white;
+    .content {
+        text-align: center;
 
-        @include border-radius(3px);
+        a {
+            padding: 6px;
+            font-weight: 600;
+            background-color: white;
+
+            @include border-radius(3px);
+        }
+
+        .inline-element { margin: 0; display: inline; }
     }
-
-    .inline-element { margin: 0; display: inline; }
 }
 
 nav {
@@ -166,7 +114,6 @@ section { background-color: $light-grey; }
     background-color: white;
 
     @include border-radius(2px);
-
     @include transform(skewX(-20deg));
 
     .text { font-size: 32px; }
@@ -230,9 +177,11 @@ section { background-color: $light-grey; }
         @include box-shadow(1px 1px 1px 1px $midnight-blue);
     }
 
-    .phone, .mail {padding: 4px; }
+    .phone,
+    .mail { padding: 4px; }
 
-    .phone:hover, .mail:hover { a { color: white; } }
+    .phone:hover,
+    .mail:hover { a { color: white; } }
 
     .info {
         width: 90%;
@@ -257,7 +206,8 @@ section { background-color: $light-grey; }
 
 .drill-info { padding: 40px 50px; }
 
-.certificates, .videos {
+.videos,
+.certificates {
     text-align: center;
     padding-bottom: 30px;
 
@@ -269,6 +219,61 @@ section { background-color: $light-grey; }
 .map { iframe { width: 100%; height: 400px; } }
 
 .certificates { a { padding: 0; img { width: 100%; } } }
+
+.why-us {
+    header {
+        font-size: 24px;
+        font-family: $page-font;
+        font-weight: 600;
+        text-align: center;
+        padding: 50px 8px 30px 8px;
+    }
+
+    .row {
+        .reason {
+            @include box-sizing(border-box);
+
+            color: rgba(127, 140, 141, 1.0);
+            text-align: center;
+
+            &:hover { color: rgba(22, 22, 22, 1.0); }
+            .icon { width: 64px; height: 64px; }
+            .txt { padding: 28px 0; font-family: $page-font; }
+        }
+
+        padding-top: 32px;
+    }
+}
+
+/* 404 style */
+.wrapper {
+  width: 650px;
+  height: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -175px;
+  margin-left: -325px;
+  overflow: hidden;
+  text-align: center;
+
+    .fundal {
+        h1 {
+            font-family: "Oswald";
+            text-align: center;
+            font-size: 100px;
+            width: 100%;
+            position: absolute;
+            overflow: hidden;
+            margin-left: -15px;
+            color: transparent;
+            text-shadow: 0px 0px 3px #eee, 5px 5px 2px teal, -5px -2px 2px mix(black,red,50);
+            font-weight: 400;
+            @include transform(skewX(0deg));
+            @include animation(shift 4s ease-in-out infinite alternate);
+        }
+    }
+}
 
 @media all and (min-width: 800px) {
     .contacts {
@@ -284,9 +289,23 @@ section { background-color: $light-grey; }
             bottom: 13%;
             border-left: 2px solid $light-grey;
         }
+
         .first { padding: 20px 10px 20px 40px; text-align: left; }
         .info:last-child { padding: 70px 40px 20px 10px; width: 34%; }
     }
+
+    .why-us {
+        .row {
+            &:after {
+                content: " ";
+                display: table;
+                clear: both;
+            }
+
+            .reason { float: left; width: 400px; }
+        }
+    }
+
 }
 
 @media all and (min-width: 400px){
@@ -325,36 +344,7 @@ section { background-color: $light-grey; }
     .tool { table { max-width: 310px; } }
 
     .contacts { .info { width: auto; } }
-}
-
-/* 404 style */
-.wrapper {
-  width: 650px;
-  height: 350px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -175px;
-  margin-left: -325px;
-  overflow: hidden;
-  text-align: center;
-
-    .fundal {
-        h1 {
-            font-family: "Oswald";
-            text-align: center;
-            font-size: 100px;
-            width: 100%;
-            position: absolute;
-            overflow: hidden;
-            margin-left: -15px;
-            color: transparent;
-            text-shadow: 0px 0px 3px #eee, 5px 5px 2px teal, -5px -2px 2px mix(black,red,50);
-            font-weight: 400;
-            @include transform(skewX(0deg));
-            @include animation(shift 4s ease-in-out infinite alternate);
-        }
-    }
+    .row { .reason { width: 100%; } }
 }
 
 @keyframes underline_text {

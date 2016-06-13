@@ -21,6 +21,8 @@
   "homepage": "https://github.com/stabone/lance#readme",
   "dependencies": {
     "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-uglify": "^1.5.3",
     "st": "^1.1.0"
   },
   "devDependencies": {
